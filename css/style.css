@@ -1,0 +1,234 @@
+/*Обнуление*/
+* {
+  padding: 0; /* устанавливает внутренние отступы/поля со всех сторон элемента */
+  margin: 0; /* определяет внешний отступ на всех четырёх сторонах элемента */
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+/* .bigred {
+  font-size: 20px;
+  color: red;
+} */
+
+body {
+  background-color: whitesmoke;
+}
+/* ================DIV=================== */
+/* .main {
+  width: 1500px;
+  height: 45px;
+  background-color: rgb(39, 112, 202);
+} */
+
+/* .menu {
+  max-width: 200px;
+  height: 1500px;
+  background-color: rgb(39, 112, 202);
+  display: inline;
+  float: left;
+} */
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* ====================================== */
+
+/* ================MENU================== */
+
+/* p {
+  font-size: 20px;
+  font-family: Montserrat;
+  color: rgb(45, 41, 41);
+} */
+
+/* ====================================== */
+
+/* .site {
+  margin-top: 45px;
+  margin-left: 170px;
+  margin-right: 50px;
+  height: 1455px;
+  border: 1px solid rgb(148, 211, 87);
+} */
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__conteiner"] {
+  max-width: 1087px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+/* PC */
+@media (max-width: 1087px) {
+  [class*="__conteiner"] {
+    max-width: 970px;
+  }
+}
+/* IPAD */
+@media (max-width: 991.68px) {
+  [class*="__conteiner"] {
+    max-width: 750px;
+  }
+}
+/* MOBILE */
+@media (max-width: 767.98px) {
+  [class*="__conteiner"] {
+    max-width: none;
+  }
+}
+
+#img {
+  width: 45px;
+  height: 45px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgb(39, 112, 202);
+}
+.header__conteiner {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+}
+
+.header__menu {
+  flex: 1 1 auto;
+}
+
+.header__button {
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu_list {
+  display: flex;
+}
+
+.menu_item {
+  margin: 0px 10px 0px 0px;
+}
+
+.menu__link {
+  text-transform: uppercase;
+  font-family: Ibarra Real Nova;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.86;
+  color: rgb(148, 211, 87);
+  letter-spacing: 0.5px;
+}
+
+.button {
+  font-family: Ibarra Real Nova;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  line-height: 0.86;
+  padding: 10px 10px;
+  color: whitesmoke;
+  border-radius: 7px;
+  background-color: rgb(39, 112, 202);
+  transition: background-color 0.3s ease 0s;
+}
+/* используется для стилизации различных элементов при наведении на них указателя мыши */
+.button:hover {
+  background-color: rgb(155, 191, 118);
+}
+
+.button_green {
+  background-color: rgb(148, 211, 87);
+}
+
+.button_blue:hover {
+  background-color: rgb(133, 202, 69);
+}
