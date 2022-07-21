@@ -10,7 +10,8 @@
     />
     <!-- &display=swap - позволяет грузится шрифтам более оптимизированно -->
     <title>НТТФ ПОЛИСАН</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header_style.css" />
+    <link rel="stylesheet" href="css/main_style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -25,10 +26,16 @@
           </a>
           <nav class="header__menu menu">
             <ul class="menu_list">
-              <li class="menu_item"><a href="" class="menu__link">ФИО</a></li>
-              <li class="menu_item"><a href="" class="menu__link">Фото</a></li>
               <li class="menu_item">
-                <a href="" class="menu__link">Что-то</a>
+                <a href="" class="menu__link"
+                  ><img id="avatar" src="img/avatar.jpeg" alt="Your Photo"
+                /></a>
+              </li>
+              <li class="menu_item">
+                <a href="" class="menu__link">Филиппова А.Ю.</a>
+              </li>
+              <li class="menu_item">
+                <a href="" class="menu__link">12891</a>
               </li>
             </ul>
           </nav>
@@ -37,24 +44,197 @@
           </div>
         </div>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <p id="selection_string">Выберите протокол для заполнения данных:</p>
+        <select id="protocol_name">
+          <option value="val1">
+            Оценка стерильности произведенной продукции
+          </option>
+          <option value="val2">
+            Анализ содержания бактериальных эндотоксинов в препарате (КТА)
+          </option>
+          <option value="val3">Бла бла бла</option>
+        </select>
+        <div class="show_1">
+          <table class="table1">
+            <tr class="head1">
+              <td>ООО НТФФ "ПОЛИСАН"</td>
+              <td>Отдел контроля качества</td>
+              <td colspan="2">Микробиологическая лаборатория</td>
+            </tr>
+            <tr class="head2">
+              <td colspan="4">
+                Протокол <br />
+                <span>Оценка стерильности произведенной продукции</span>
+              </td>
+            </tr>
+            <tr class="head3">
+              <td>Наименование препарата</td>
+              <td>Гадовист, раствор для внутривенного введения 1 ммоль/мл</td>
+              <td>в бутылках</td>
+              <td>15 мл</td>
+            </tr>
+            <tr class="head4">
+              <td colspan="4">
+                Контроль бионагрузки в промежуточном продукте Гадовиста раствор
+              </td>
+            </tr>
+            <tr class="head5">
+              <td>Нормативный документ</td>
+              <td colspan="3">
+                СПС-КО-1917-1645 "Промежуточный продукт Гадовиста раствор"
+              </td>
+            </tr>
+            <tr class="head6">
+              <td>Методика контроля</td>
+              <td colspan="3">
+                СПС-КО-2200-0197 "Контроль бионагрузки в растворах лекарственных
+                препаратов"
+              </td>
+            </tr>
+            <tr class="head7">
+              <td>Норма</td>
+              <td colspan="3">по факту</td>
+            </tr>
+            <tr class="head8">
+              <td colspan="4">
+                Условные сокращения: р.н. - роста нет; к.б. - коккобацила -
+                палочка сворообразующая; м/о - микроорганизм; шт. - штука; н.и.
+                - не использовался
+              </td>
+            </tr>
+            <tr class="head7">
+              <td colspan="1">Рабочее место свободно и очищено</td>
+              <td colspan="3">
+                <input type="checkbox" class="checkbox" /> Да /
+                <input type="checkbox" class="checkbox" /> Нет
+              </td>
+            </tr>
+            <tr class="head7">
+              <td colspan="1">Материалы</td>
+              <td colspan="3">Отметка о стерильности</td>
+            </tr>
+            <tr class="head7">
+              <td colspan="1">
+                Мембранные фильтры, воронки для мембранной фильтрации, пипетка
+              </td>
+              <td colspan="3">
+                <input type="checkbox" class="checkbox" /> Да /
+                <input type="checkbox" class="checkbox" /> Нет
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="show_2">
+          <table class="table2">
+            <tr class="boldText">
+              <td>Питательные среды, растворы</td>
+              <td>Номер серии</td>
+              <td>Годен до</td>
+              <td>Ростовые свойства</td>
+              <td>ИО</td>
+              <td>Заводской номер</td>
+              <td>Дата следующей поверки/аттестации</td>
+            </tr>
+            <tr>
+              <td>Соево-козеиновый агар</td>
+              <td>---</td>
+              <td>---</td>
+              <td>
+                <input type="checkbox" class="checkbox" /> подтверждены /
+                <input type="checkbox" class="checkbox" /> не подтверждены
+                <br />протокол номер ____
+              </td>
+              <td>Инкубатор Memmert IN750</td>
+              <td>
+                <input type="checkbox" class="checkbox" /> D818.0116
+                <br /><input type="checkbox" class="checkbox" />
+                D818.0117
+              </td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>
+                Фосфатный буферный раствор <br />
+                с натрия хлоридом и пептоном pH 7,0
+              </td>
+              <td>---</td>
+              <td>---</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Жидкость №2</td>
+              <td>---</td>
+              <td>---</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="show_3">
+          <table class="table3">
+            <tr class="boldText">
+              <td rowspan="3">Номер поступившей пробы</td>
+              <td rowspan="3">Объем посевной пробы, мл</td>
+              <td rowspan="3">Дата и время отбора пробы</td>
+              <td rowspan="3">Дата и время посева</td>
+              <td rowspan="3">ФИО, подпись проводившего посев</td>
+              <td rowspan="3">Дата и время учета результатов</td>
+              <td rowspan="3">
+                ФИО, подпись ответственного за учет результатов
+              </td>
+              <td colspan="3">Учет результатов</td>
+            </tr>
+            <tr class="boldText">
+              <td colspan="2">отсутствие/наличие роста<br />количество КОЕ</td>
+              <td rowspan="2">идентификация выделенных м/о</td>
+            </tr>
+            <tr>
+              <td>10 мл</td>
+              <td>1 мл</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="10">
+                <b>Заключение</b>: по показателю "Бионагрузка" раствор препарата
+                из реактора соответствует/несоответствует требованиям
+                спецификации
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" rowspan="2">
+                Заведующий микробиологической лабораторией
+              </td>
+              <td colspan="3" class="boldText">ФИО</td>
+              <td colspan="2" class="boldText">Подпись</td>
+              <td colspan="2" class="boldText">Дата</td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="2"></td>
+              <td colspan="2"></td>
+            </tr>
+          </table>
+        </div>
+      </main>
       <footer class="footer"></footer>
     </div>
-    <script type=""></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-<!-- <div class="main">
-  <p id="auth">Войти</p>
-  <p id="photo">Фото</p>
-  <p id="name">Имя</p>
-</div>
-<div class="menu">
-  <p id="form">Формы</p>
-  <p id="shablon">Шаблоны</p>
-  <p id="document">Документы</p>
-  <p id="prints">Печати</p>
-  <p id="test">Пробы</p>
-  <p id="water">Вещества</p>
-</div>
-<div class="site">kmwdkmls</div> -->
