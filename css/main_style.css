@@ -44,7 +44,7 @@ td {
   padding-right: 50px;
 } */
 
-select {
+#protocol_name {
   margin-left: 100px;
   padding-right: 0px;
   height: 30px;
@@ -56,7 +56,7 @@ select {
   transition: background-color 0.5s ease 0s;
 }
 
-select:hover {
+#protocol_name:hover {
   background-color: rgb(148, 211, 87);
 }
 

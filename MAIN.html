@@ -40,11 +40,22 @@
             </ul>
           </nav>
           <div class="header__button">
-            <a href="" class="button button_green">ВОЙТИ</a>
+            <button class="loginButton">ВОЙТИ</button>
           </div>
         </div>
       </header>
       <main class="main">
+        <div
+          id="myPrompt"
+          style="position: absolute; z-index: 123; display: none"
+        >
+          здесь хоть два поля, хоть десять + плюс кнопки Отмена и ОК
+          <button
+            onclick="document.getElementById ('myPrompt').style.display = 'none'"
+          >
+            Ok
+          </button>
+        </div>
         <p id="selection_string">Выберите протокол для заполнения данных:</p>
         <select id="protocol_name">
           <option value="val1">
@@ -138,8 +149,8 @@
             </tr>
             <tr>
               <td>Соево-козеиновый агар</td>
-              <td>---</td>
-              <td>---</td>
+              <td class="serialNumber">№</td>
+              <td class="expirationDate">---</td>
               <td>
                 <input type="checkbox" class="checkbox" /> подтверждены /
                 <input type="checkbox" class="checkbox" /> не подтверждены
@@ -151,15 +162,15 @@
                 <br /><input type="checkbox" class="checkbox" />
                 D818.0117
               </td>
-              <td>---</td>
+              <td class="verificationDate">---</td>
             </tr>
             <tr>
               <td>
                 Фосфатный буферный раствор <br />
                 с натрия хлоридом и пептоном pH 7,0
               </td>
-              <td>---</td>
-              <td>---</td>
+              <td class="serialNumber">№</td>
+              <td class="expirationDate">---</td>
               <td></td>
               <td></td>
               <td></td>
@@ -167,8 +178,8 @@
             </tr>
             <tr>
               <td>Жидкость №2</td>
-              <td>---</td>
-              <td>---</td>
+              <td class="serialNumber">№</td>
+              <td class="expirationDate">---</td>
               <td></td>
               <td></td>
               <td></td>
@@ -199,13 +210,23 @@
               <td>1 мл</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="sampleNumber">---</td>
+              <td class="sampleVolume">---</td>
+              <td class="sampleDate">---</td>
+              <td class="sowingDate">---</td>
+              <td>
+                <select class="sowingName">
+                  <option value="name1">Филиппова А.Ю.</option>
+                  <option value="name1">Гаврилова Ю.С.</option>
+                </select>
+              </td>
+              <td class="resultDate">---</td>
+              <td>
+                <select class="sowingName">
+                  <option value="name1">Филиппова А.Ю.</option>
+                  <option value="name1">Гаврилова Ю.С.</option>
+                </select>
+              </td>
               <td></td>
               <td></td>
               <td></td>
@@ -236,5 +257,6 @@
       <footer class="footer"></footer>
     </div>
     <script src="script.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>

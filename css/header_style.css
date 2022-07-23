@@ -207,7 +207,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-.button {
+.loginButton {
   font-family: Ibarra Real Nova;
   display: inline-block;
   letter-spacing: 0.5px;
@@ -223,11 +223,11 @@ body {
   background-color: rgb(155, 191, 118);
 }
 
-.button_green {
+.loginButton {
   background-color: rgb(148, 211, 87);
 }
 
-.button_blue:hover {
+.loginButton:hover {
   background-color: rgb(133, 202, 69);
 }
 
@@ -236,4 +236,10 @@ body {
   border-radius: 50%;
 }
 
-
+#myPrompt {
+  margin-top: 250px;
+  margin-left: 400px;
+  border: 1px solid;
+  background-color: white;
+  padding: 150px 100px;
+}
