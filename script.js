@@ -5,13 +5,29 @@
 let protocols = document.querySelector("select");
 let options = protocols.querySelectorAll("option");
 let btn = document.querySelector("#btn");
-let div = document.querySelector(".show");
+let val1 = document.querySelector("#val1");
+let main = document.querySelector(".main");
+let sterilityAssessment = document.querySelector("#sterilityAssessment");
 
-// protocols.addEventListener("change", function () {
-//   console.log(this.value);
-//   // div.classList.add('show')
-//   table1();
-// });
+// Клонирование таблицы и изменение ее id
+let table = sterilityAssessment.cloneNode(true);
+table.id = "table123";
+main.appendChild(table);
+let d = document.querySelector("#table123");
+
+protocols.addEventListener("change", function () {
+  if (protocols.value == "val1") {
+    sterilityAssessment.style.display = "block";
+  } else {
+    sterilityAssessment.style.display = "none";
+  }
+  if (protocols.value == "val2") {
+    d.style.backgroundColor = "red";
+    d.style.display = "block";
+  } else {
+    d.style.display = "none";
+  }
+});
 
 /*=====================SerialNumber=========================*/
 
@@ -40,6 +56,10 @@ let expirationDate = document.querySelectorAll(".expirationDate");
 let data = new Date();
 
 for (let date of expirationDate) {
+  dateFormat(date);
+}
+
+function dateFormat(date) {
   let month = data.getMonth() + 1;
   let day = data.getDate();
 
@@ -49,6 +69,7 @@ for (let date of expirationDate) {
   if (day < 10) {
     day = "0" + day;
   }
+
   date.textContent = day + "." + month + "." + data.getFullYear();
 }
 
@@ -56,16 +77,7 @@ for (let date of expirationDate) {
 
 let verificationDate = document.querySelector(".verificationDate");
 
-let month = data.getMonth() + 1;
-let day = data.getDate();
-
-if (month < 10) {
-  month = "0" + month;
-}
-if (day < 10) {
-  day = "0" + day;
-}
-verificationDate.textContent = day + "." + month + "." + data.getFullYear();
+dateFormat(verificationDate);
 
 /*=====================SampleNumber=========================*/
 
@@ -142,8 +154,28 @@ sowingDate.addEventListener("click", function func() {
   });
 });
 
+// sowingDate.addEventListener("click", (event) => changeData(sowingDate, event));
+
+// function changeData(elem, event) {
+//   let input = document.createElement("input");
+//   input.value = elem.textContent;
+//   elem.innerHTML = "";
+//   console.log("why");
+//   elem.append(input);
+//   elem.removeEventListener("click", changeData);
+
+//   console.log(event.target.className, elem.textContent);
+
+//   input.addEventListener("blur", () => {
+//     elem.innerHTML = input.value;
+//     input.remove();
+//     elem.addEventListener("click", changeData);
+//     console.log(2);
+//   });
+// }
+
 /*=====================ResultDate=========================*/
 
 let resultDate = document.querySelector(".resultDate");
 
-resultDate.textContent = day + "." + month + "." + data.getFullYear();
+dateFormat(resultDate);
